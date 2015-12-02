@@ -63,19 +63,22 @@ public class SocialMediaDemo implements Runnable {
         
         YouTubeVideo video1 = new YouTubeVideo("MormonMessages", "Bullying",
                 "President Uchtdorf counsels us to stop bullying.");
+        EntryAdapter entry1 = new EntryAdapter(video1);
         
         YouTubeVideo video2 = new YouTubeVideo("MormonMessages", "Patterns of Light",
                 "Elder Bednar teaches about the Light of Christ.");
+         EntryAdapter entry2 = new EntryAdapter(video2);
         
         YouTubeVideo video3 = new YouTubeVideo("Randy Pausch", "The Last Lecture",
                 "Achieving your childhood dreams.");
+         EntryAdapter entry3 = new EntryAdapter(video3);
         
         List<SocialMediaEntry> entries = new ArrayList<>();
         
         // YouTubeVideo does not implement the correct interface to allow this!
-        //entries.add(video1);
-        //entries.add(video2);
-        //entries.add(video3);
+        entries.add(entry1);
+        entries.add(entry2);
+        entries.add(entry3);
         
         DataAnalyzer analyzer = new DataAnalyzer();
         analyzer.analyzeEntries(entries);
